@@ -1,10 +1,12 @@
+<app-navbar></app-navbar>
+
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row mt-3">
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <table class="table">
-                        <thead>
+                        <thead class="text-center">
                             <tr>
                                 <th>User ID</th>
                                 <th>ID</th>
@@ -13,9 +15,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *infoFor="let i of list">
-                                <td>{{i.userId}}</td>
-                                <td>{{i.id}}</td>
+                            <tr *ngFor="let i of list">
+                                <td class="text-center">{{i.userId}}</td>
+                                <td class="text-center">{{i.id}}</td>
                                 <td>{{i.title}}</td>
                                 <td>{{i.body}}</td>
                             </tr>
