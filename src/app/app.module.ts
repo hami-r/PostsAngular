@@ -5,16 +5,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddPostsComponent } from './add-posts/add-posts.component';
 import { ViewPostsComponent } from './view-posts/view-posts.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myRoute:Routes = [
+  {
+    path:"",
+    component: AddPostsComponent
+  },
+  {
+    path:"view",
+    component:ViewPostsComponent
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     AddPostsComponent,
-    ViewPostsComponent
+    ViewPostsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
